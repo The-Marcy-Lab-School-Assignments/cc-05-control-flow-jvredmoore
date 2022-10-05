@@ -1,18 +1,27 @@
 //1
-function absoluteValue(number){
-  console.log(typeof number)
-  if(typeof number === "number"){
-    if(number < 0){
-        return number * -1
-    }  
+function absoluteValue(num){
+  if(typeof num === "number"){
+      if(num > 0){
+          return num;
+      }else{
+          return num * -1;
+      }
   }else{
-     return number
-    }
-  }else{
-      return null
+      return null;
+  }
 }
 
-absoluteValue(20)
+console.log(absoluteValue('20'));
 
+//bonus
+function multiplesOfFourAndSix() {
+    let multiples = [];
+    for (let i = 1; i<=100; i++){
+        if (i % 4 === 0 && i % 6 === 0){
+            multiples.push(i);
+        }
+    }
+    return multiples;
+}
 
-
+console.log(multiplesOfFourAndSix());
